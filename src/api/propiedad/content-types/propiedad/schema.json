@@ -4,7 +4,8 @@
   "info": {
     "singularName": "propiedad",
     "pluralName": "propiedades",
-    "displayName": "Propiedades"
+    "displayName": "Propiedades",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,38 @@
     "estacionamiento": {
       "type": "integer",
       "required": true
+    },
+    "wc": {
+      "type": "integer",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "precio": {
+      "type": "biginteger"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "categorias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::categoria.categoria",
+      "mappedBy": "propiedade"
+    },
+    "agentes": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::agente.agente"
     }
   }
 }
