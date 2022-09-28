@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "propiedades",
+  "info": {
+    "singularName": "propiedad",
+    "pluralName": "propiedades",
+    "displayName": "Propiedades"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "habitaciones": {
+      "type": "integer",
+      "required": true
+    },
+    "estacionamiento": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
