@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lugares",
+  "info": {
+    "singularName": "lugar",
+    "pluralName": "lugares",
+    "displayName": "En venta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "en_venta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::propiedad.propiedad",
+      "inversedBy": "en_ventas"
+    }
+  }
+}
